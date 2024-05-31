@@ -1,0 +1,56 @@
+
+<div class="signin-form-box" id="log-in-form-box">
+    <form action="/create_acc" method="post" class = "signin-form-content"  id="log-in-form"> <!--action="/create_acc" method="post"-->
+        <h2 style="font-family: 'gyptfcerom_1';" class = "signin-form-item">Sign up</h2>
+
+        <h4 style="font-family: 'gyptfcerom_1';" class = "signin-form-item">Username:</h4>
+        <input type="text" name="username" id="username" placeholder="username" required
+            autocomplete="username" class = "signin-form-item">
+        <h4 style="font-family: 'gyptfcerom_1';" class = "signin-form-item">Password:</h4>
+        <input type="password" name="password" id="pwd" placeholder="Κωδικός πρόσβασης" required
+            autocomplete="current-password" class = "signin-form-item">
+
+        <h4 style="font-family: 'gyptfcerom_1';" class = "signin-form-item">Confirm Password:</h4>
+        <input type="password" name="password2" id="pwd2" placeholder="Κωδικός πρόσβασης" required
+            autocomplete="current-password" class = "signin-form-item">
+
+        <h4 style="font-family: 'gyptfcerom_1';" class = "signin-form-item">E-mail:</h4>
+        <input type="email" name="email" id="email" placeholder="email" required
+            autocomplete="current-password" class = "signin-form-item">
+
+        <h4 style="font-family: 'gyptfcerom_1';" class = "signin-form-item">Phone number:</h4>
+        <input type="number" name="phone" id="phone" placeholder="phone" required
+            autocomplete="off" class = "signin-form-item">
+
+        <button type="submit" class = 'SubmitButton signin-form-item' id="submit-button">Create account</button>
+        <h6 style="font-family: 'gyptfcerom_1'; color:red; margin-top: 0px;" class = "signin-form-item">{{failedTest}}</h6>
+
+    </form>
+    
+</div>
+
+<!-- <div class="signin-form-box" id="log-in-form-box">
+    <form  class = "signin-form-content"  id="log-in-form"> action="/create_acc" method="post"
+        <h2 style="font-family: 'gyptfcerom_1';" class = "signin-form-item">Εγγραφή</h2>
+
+        <h4 style="font-family: 'gyptfcerom_1';" class = "signin-form-item">Όνομα χρήστη:</h4>
+        <input type="text" name="username" id="username" placeholder="username" required
+            autocomplete="username" class = "signin-form-item">
+        <h4 style="font-family: 'gyptfcerom_1';" class = "signin-form-item">Κωδικός πρόσβασης:</h4>
+        <input type="password" name="password" id="pwd" placeholder="Κωδικός πρόσβασης" required
+            autocomplete="current-password" class = "signin-form-item">
+
+        <h4 style="font-family: 'gyptfcerom_1';" class = "signin-form-item">Επαλήθευση κωδικού:</h4>
+        <input type="password" name="password2" id="pwd2" placeholder="Κωδικός πρόσβασης" required
+            autocomplete="current-password" class = "signin-form-item">
+
+        <h4 style="font-family: 'gyptfcerom_1';" class = "signin-form-item">E-mail:</h4>
+        <input type="email" name="email" id="email" placeholder="Κωδικός πρόσβασης" required
+            autocomplete="current-password" class = "signin-form-item">
+
+        <button type="submit" class = 'SubmitButton signin-form-item' id="submit-button">Δημιουργία λογαριασμού</button>
+        <h6 style="font-family: 'gyptfcerom_1'; color:red; margin-top: 0px;" class = "signin-form-item">{{failedTest}}</h6>
+
+    </form>
+    
+</div> -->

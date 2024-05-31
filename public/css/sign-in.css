@@ -1,0 +1,131 @@
+.signin-form-box{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;
+    margin-top: 5%;
+
+
+}
+
+form.signin-form-content{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'gyptfcerom_1';
+    width: 20%;
+    border: 2px solid rgb(4, 16, 74);;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, and color */
+    margin-bottom: 3%;
+    
+}
+
+
+.signin-form-content input{
+    display:block;
+}
+
+.signin-form-box h2{
+    display:block;
+}
+
+.signin-form-box h5{
+    display:block;
+}
+
+.signin-form-item{
+    margin-bottom: 10px;
+    width:80%;
+    border-radius: 5px;
+    border-color: transparent;
+    text-align: center;
+    text-decoration: none;
+}
+
+.SubmitButton{
+    background-color: rgb(4, 16, 74);;
+    color:white;
+    width: 80%;
+    position: relative;
+}
+
+
+
+.SubmitButton:hover{
+    background-color: rgb(33, 58, 184);;
+}
+
+.sign-in-button{
+    background-color: rgb(4, 16, 74);;
+    color:white;
+    width: 80%;
+    position: relative;
+    font-family: 'gyptfcerom_1';
+}
+
+
+
+  .sign-in-button:hover{
+    background-color: rgb(33, 58, 184);
+}
+
+h5.errorMsg{
+    color: red;
+}
+
+.signin-form-content a{
+    font-family: 'gyptfcerom_1';
+}
+
+.signin-form-item.sign-in-button{
+    font-family: 'gyptfcerom_1',Calibri;
+    text-decoration: none;
+    
+}
+
+
+/* Add this to handle responsive form */
+@media (max-width: 768px) {
+
+    
+
+    form.signin-form-content {
+        width: 80%; /* Increase width for smaller screens */
+        margin-top: 20%;
+    }
+
+    input.signin-form-item  {
+        width: 90%; /* Increase input field width */
+        height: 2em;
+        background-color: rgb(213, 213, 249); ;
+    }
+
+    .SubmitButton, .sign-in-button {
+        width: 90%; /* Increase button width */
+        height: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    
+
+    form.signin-form-content {
+        width: 95%; /* Further increase width for very small screens */
+        margin-top: 20%;
+    }
+
+    input.signin-form-item {
+        width: 95%; /* Further increase input field width */
+        height: 2em;
+        background-color: rgb(213, 213, 249); ;
+    }
+
+    .SubmitButton, .sign-in-button {
+        width: 95%; /* Further increase button width */
+        height: 2em;
+    }
+}

@@ -1,0 +1,107 @@
+    <div class="reservation-container">
+        <h1>Admin Reservations</h1>
+
+        <div class="d-flex justify-content-between ">
+            <h2>Current Reservations</h2>
+            <div class="date-picker-container">
+                <form id="load-reservations-form" action="/manage_reservations" method="GET">
+                    <input type="date" id="pick-date" name = "for_date" class="form-control" required value="{{selectedDate}}" placeholder="select date">
+                    <button type="submit" id="load-reservations" class="btn btn-primary">Load</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table id="reservations-table" class="table table-striped text-center">
+                <thead>
+                    <tr>
+                        <th>Customer</th>
+                        <th>Time</th>
+                        <th>Guests</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each reservation}}
+                        <tr>
+                            <td>{{this.username}}</td>
+                            <td>{{this.reservation_starttime}}</td>
+                            <td>{{this.guests}}</td>
+                            <!--<td><a href="/reservation/delete/{{this.id}}">Delete</a></td>-->
+                            <td>
+                                <form action="/reservation/delete/{{this.id}}" method="POST" style="display:inline;">
+                                    <button type="submit" class="admin_delete_btn btn btn-danger">Delete</button>
+                                </form>
+                            </td>
+                            
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+
+
+        <h1>Make a Reservation</h1>
+        <form method="POST" action="/admin_reserv" class="reservation-form">
+            <div class="res_name">
+                <label for="customer">Customer:</label>
+                <div class="customer-inputs">
+                    <select id="customer" name="customer" class="res_name">
+                        <option value="default">Select Customer</option>
+                        {{#each username}}
+                            <option >{{this.username}}</option>
+                        {{/each}}
+                        <!-- Customers will be populated here by JavaScript -->
+                    </select>
+                    <span class="or-separator">or</span>
+                    <input type="text" id="guest-name" name="guest_name" class="res_name" placeholder="Enter Guest Name">
+                </div>
+            </div>
+            <label for="number-of-guests">Number of Guests:</label>
+            <select id="guests" name="guests">
+                <option value="default">People</option>
+                <option value="1">1 persons</option>
+                <option value="2">2 persons</option>
+                <option value="3">3 persons</option>
+                <option value="4">4 persons</option>
+                <option value="5">5 persons</option>
+                <option value="6">6 persons</option>
+                <option value="7">7 persons</option>
+                <option value="8">8 persons</option>
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="reservation_date" placeholder="Select a date">
+
+            <label for="time">Time:</label>
+            <select id="time" name="time">
+                <option value="default">Select Time</option>
+                <option value="17:00">17:00</option>
+                <option value="17:30">17:30</option>
+                <option value="18:00">18:00</option>
+                <option value="18:30">18:30</option>
+                <option value="19:00">19:00</option>
+                <option value="19:30">19:30</option>
+                <option value="20:00">20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21:00">21:00</option>
+                <option value="21:30">21:30</option>
+                <option value="22:00">22:00</option>
+                <option value="22:30">22:30</option>
+            </select>    
+            
+            <div style="font-family: 'gyptfcerom_1'; color:red; margin-top: 0px;" class="error-message ">{{failedToReserv}}</div>
+            <button type="submit" class="submit-btn">Book Now</button>
+        </form>
+
+        
+    </div>
+
+    <div class="general_info_div">
+        <ul>
+            <li>The kitchen closes at 23:00 pm and the restaurant at 01:00am</li>
+            <li>TERRACE: Air conditioned smoking area</li>
+            <li>INDOOR GROUND HALL: Air conditioned non-smoking area</li>
+            <li>1st FLOOR: Air conditioned non-smoking area</li>
+        </ul>  
+    </div>

@@ -1,0 +1,29 @@
+[
+    
+    {"title": "Taralli pugliesi","price": "4.90",
+    "category": "snacks","plateId": "1"},
+
+    {"title": "Cerignola olives","price": "5.90",
+    "category": "snacks","plateId": "2"},
+
+    {"title": "Selection of 3 cicchetti","price": "6.90",
+    "category": "venetian tapas","plateId": "3"},
+        
+    {"title": "Selection of 12 cicchetti","price": "12.90",
+    "category": "venetian tapas","plateId": "4"},
+        
+    {"title": "Caprese Salad","price": "4.90",
+    "category": "small plates","plateId": "5"},
+        
+    {"title": "Artichoke Salad","price": "4.90",
+    "category": "small plates","plateId": "6"},
+        
+    {"title": "Focaccia & dips","price": "4.90",
+    "category": "small plates","plateId": "7"},
+        
+    {"title": "Bruschetta Classica tomatoes & basil","price": "4.90",
+    "category": "bruschetta","plateId": "8"},
+        
+    {"title": "Dolcetto di Dogliani Papà celso","price": "12.00",
+    "category": "red wines","plateId": "9"}
+ ]

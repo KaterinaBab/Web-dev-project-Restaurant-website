@@ -1,0 +1,99 @@
+  <div class="imageContainer">
+    <!-- Image element -->
+    <img src="images/dish2.jpg" alt="Your Image" class="image">
+  </div>
+
+<div class = "TheMenuxx">
+    <div class="Container1xx">
+        <div class="Food-menuxx">
+        {{#each food_type}}
+             
+            <ul class = "food-type">
+                <div class = "title-and-add">
+                    <li class = "type" style="font-family:'egyptfcerom_1';">
+                        <strong style="font-size:1.5em;">{{@key}}</strong>
+                    </li>
+                    {{#if ../admi}}
+                    <!-- <a href="/add/plate/{{@key}}" class = "add-plate">new</a> -->
+                        <button id="openForm{{@index}}" class = "add-plate">New</button>
+                        <div id="overlay{{@index}}" class = "overlay"></div>
+                        <div id="popupForm{{@index}}" class="popup-new-plate">
+                            <form action="/add/plate" method="post" class = "new-plate-form">
+                                <!-- Your form elements go here -->
+                                <label for="title">Title:</label>
+                                <input type="text" id="title{{@index}}" name="title" autocomplete="off">
+
+                                <label for="extras">Extras:</label>
+                                <input type="text" id="extras{{@index}}" name="extras" class = "extras" autocomplete="off" >
+
+                                <label for="price">Price:</label>
+                                <input type="text" id="price{{@index}}" name="price" autocomplete="off">
+
+                                <label for="type">Type:</label>
+                                <input type="text" id="type" name="type" value = "{{@key}}" readonly>
+                                <!-- Additional form fields -->
+                                <button type="submit" class="btn add-btn">Add</button>
+                                <button id="cancel-btn{{@index}}" class="btn cancel-btn">Cancel</button>
+                            </form>
+                        </div>
+                    {{/if}}
+                
+                </div>
+                <hr>
+                {{#each this}}
+                    <li class = "plate">
+
+                        <div class = "title-and-extras">
+                            <div class = "plate-title" style ="font-size: 1.2em;">
+                                <i>{{title}}</i>
+                            </div>
+                            <div class = "plate-extras" style="font-size: 0.8em;">
+                                {{extras}}
+                            </div>
+                        </div>
+                        <div class = "price">
+                        $&nbsp;{{price}}
+                        
+                        {{#if ../../admi}}
+                            <a href="/plate/remove/{{id}}"><i class="fas fa-trash"></i></a>
+                            <a href="#" id="editPlate{{id}}"><i class="fas fa-edit"></i></a>
+
+                        {{/if}}
+                        </div>
+                    </li>
+                    <li class=" plate-form">
+                    {{#if ../../admi}}
+                        
+                        <form action="/plate/update/{{id}}" method="post" class = "edit-plate-form" id="editForm{{id}}">
+                            
+                            <label for="title">Title:</label>
+                            <input type="text" id="title{{id}}" name="title" autocomplete="off" value = "{{title}}">
+
+                            <label for="extras">Extras:</label>
+                            <input type="text" id="extras{{id}}" name="extras"  autocomplete="off" value = "{{extras}}">
+
+                            <label for="price">Price:</label>
+                            <input type="text" id="price{{id}}" name="price" autocomplete="off" value="{{price}}">
+
+                            
+                            <button type="submit"><i class="fas fa-save"></i></button>                      
+                        </form>
+                    {{/if}}
+                    </li>
+                {{/each}}
+            </ul>
+        {{/each}}    
+        </div>
+
+
+        <div class="Wine-image">
+            <img src="images/winemenu.jpeg" alt="Wine Menu Image">
+        </div>
+        
+    </div>
+</div>
+<hr style=" margin-right:auto; width: 60%; ">
+
+{{#each script}}
+        <script src="scripts/{{this}}"></script>
+    {{/each}}

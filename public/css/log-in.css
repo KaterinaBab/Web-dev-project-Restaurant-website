@@ -1,0 +1,114 @@
+.signin-form-box{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;
+    margin-top: 30px;
+
+
+}
+
+form.signin-form-content{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'gyptfcerom_1';
+    width: 20%;
+    border: 2px solid rgb(4, 16, 74);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, and color */
+    
+}
+
+
+.signin-form-content input{
+    display:block;
+}
+
+.signin-form-box h2{
+    display:block;
+}
+
+.signin-form-box h5{
+    display:block;
+}
+
+.signin-form-item{
+    margin-bottom: 10px;
+    width:80%;
+    border-radius: 5px;
+    border-color: transparent;
+    text-align: center;
+}
+
+.SubmitButton{
+    background-color: rgb(4, 16, 74);
+    color:white;
+    width: 80%;
+    position: relative;
+}
+
+
+.SubmitButton:hover{
+    background-color: rgb(33, 58, 184);
+}
+
+.sign-in-button{
+    background-color: rgb(4, 16, 74);
+    color:white;
+    width: 80%;
+    position: relative;
+}
+
+.sign-in-button::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0; /* Start with zero width */
+    height: 2px; /* Height of the horizontal line */
+    background-color: rgb(4, 16, 74); /* Color of the horizontal line */
+    transition: width 0.4s ease; /* Smooth transition */
+    
+    z-index: -1; /* Ensure line stays behind text */
+  }
+
+  .sign-in-button:hover::after{
+    width: 100%; /* Decrease line width on hover */
+    margin-top: 10px;
+    
+  }
+
+  .sign-in-button:hover{
+    background-color: rgb(33, 58, 184);
+}
+
+h5.errorMsg{
+    color: red;
+}
+
+@media (max-width: 768px) {
+    form.signin-form-content {
+        width: 90%;
+        margin-top: 15%;
+        margin-bottom: 5%;
+    }
+
+    .signin-form-content input,
+    .SubmitButton,
+    .sign-in-button {
+        width: 90%;
+        height: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    form.signin-form-content {
+        margin-top: 15%;
+        width: 95%;
+        margin-bottom: 5%;
+    }
+}

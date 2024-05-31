@@ -1,0 +1,102 @@
+.reservation-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+.reservation-container h1 {
+    text-align: center;
+    color: #333;
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.reservation-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.reservation-form select,
+.reservation-form input,
+.reservation-form button {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.submit-btn {
+    background-color: #666;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #555;
+}
+
+.general_info_div {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.general_info_div ul {
+    padding-left: 0; /* Ensuring list starts without any padding */
+}
+
+.general_info_div li {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif !important;
+    margin-left: 2rem;
+    background-color: rgba(255,255,255,0.9);
+    line-height: 1.42857143;
+}
+
+.reservation-form input:hover,
+.reservation-form select:hover {
+    border-color: #666; /* Change to a darker or more noticeable color */
+    border-width: 1px; /* Slightly thicker border to draw attention */
+    cursor: pointer; /* Ensures the cursor changes to indicate clickability */
+}
+
+/* Maintain the appearance during focus as well to improve usability */
+.reservation-form input:focus,
+.reservation-form select:focus {
+    border-color: #666; /* Same as hover effect */
+    border-width: 1px;
+    outline: none; /* Optional: removes the default focus outline */
+}
+
+/* Additional hover effect for buttons for consistency */
+.submit-btn:hover {
+    background-color: #555; /* Darker on hover as already set */
+    border-color: #444; /* Optional: if you want to change border color on hover */
+}
+
+
+/* Additional styling for disabled options to make it clear they are not selectable */
+input[type="date"]:in-range {
+    color: initial;
+}
+input[type="date"]:out-of-range {
+    color: grey;
+}
+
+
+
+@media (max-width: 600px) {
+    .reservation-container{
+        width: 85%;
+    }
+}

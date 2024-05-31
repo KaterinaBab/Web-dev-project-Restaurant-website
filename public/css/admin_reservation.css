@@ -1,0 +1,127 @@
+.reservation-container {
+    padding: 20px;
+}
+
+.date-picker-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#reservations-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+#reservations-table th, #reservations-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#reservations-table th {
+    width: 25%;
+    padding: 10px;
+}
+
+#reservations-table td {
+    width: 25%;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .date-picker-container {
+        width: 100%;
+    }
+
+    #reservations-table th, #reservations-table td {
+        padding: 5px;
+        font-size: 0.9em;
+    }
+}
+
+.admin_delete_btn {
+    background-color: #ff4d4d; /* Red color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.admin_delete_btn:hover {
+    background-color: #ff1a1a; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Optional: Add focus effect */
+.admin_delete_btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.6);
+}
+
+/* Additional styling for disabled options to make it clear they are not selectable */
+select option:disabled {
+    color: #ccc; /* Light gray color indicating not selectable */
+    background-color: #f9f9f9; /* Light background for better contrast */
+}
+
+select option:disabled:hover {
+    cursor: not-allowed;
+}
+
+.res_name {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.customer-inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.res_name select,
+.res_name input {
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.or-separator {
+    margin: 0 10px;
+    font-weight: bold;
+    color: #555;
+    white-space: nowrap;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .customer-inputs {
+        flex-direction: column;
+    }
+
+    .res_name select,
+    .res_name input {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .or-separator {
+        margin: 10px 0;
+    }
+}

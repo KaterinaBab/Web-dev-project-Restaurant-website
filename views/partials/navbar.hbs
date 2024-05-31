@@ -1,0 +1,34 @@
+<div class="navbar-container" id="MyfNavbar">
+        <span class="navbar-toggler" style="color:white" onclick="toggleNavbar()">☰</span> 
+        <div class=" navbar-content" id="navbarContent">
+            <ul class="navbar-list">
+                <li  onclick="window.location.href='/';" class = "{{isActiveHome}}">Home</li>
+                <li  onclick="window.location.href='/menu2';" class = "{{isActiveMenu}}">Menu</li>
+                <!--<li  onclick="window.location.href='/';"  class="Logo {{isActiveHome}}"><img src="images/logo.png" alt="Logo"></li> -->
+                <li onclick="window.location.href='/';" class="nav-item logoDiv">
+                    <div class="logo-text">
+                        the italians<span class="dot-red">. </span><span class="dot-green">.</span>
+                    </div>
+                    <span class="subtext">wine and food</span>
+                </li>
+                {{#if admi}}
+                    
+                    <li  onclick="window.location.href='/manage_reservations';" class = "{{isActiveReservation}}">Reservations</li>
+                {{else}}
+                    <li  onclick="window.location.href='/reservations';" class = "{{isActiveReservation}}">Book a Table</li>
+                {{/if}}
+                
+                {{#if loggedIn}}
+                   
+                    <li  onclick="window.location.href='/logout';" style="color:white">
+                    <i>{{name}}</i> <!--<i class="fas fa-sign-out-alt"></i>-->
+                    </li>
+                   
+                     
+                {{else}}
+                    <li  onclick="window.location.href='/signin_form';" class = "{{isActiveSignin}}">Sign in</li>
+                {{/if}}
+                
+            </ul>
+        </div>
+    </div> 

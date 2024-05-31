@@ -1,0 +1,260 @@
+.add-plate{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(16, 37, 107);
+  border-radius: 3px;
+  font-family:'egyptfcerom_1';
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5%;
+}
+
+.add-plate:hover{
+  
+  background-color: rgb(92, 104, 241);
+}
+
+.title-and-add{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+
+.Food-menuxx{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  width:50%;
+  margin-top: 5%;
+  margin-right: 30%;
+  margin-bottom: 10%;
+  background-color: antiquewhite;
+}
+
+.Container1xx{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center; 
+  margin-top:5%;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.popup-new-plate {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  z-index: 1001; /* Set a higher z-index than the overlay */
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1000; /* Place the overlay below the form */
+}
+
+.blur {
+  filter: blur(5px); /* Adjust the blur radius as needed */
+}
+
+.new-plate-form{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family:'egyptfcerom_1';
+  padding-left:25px;
+  padding-right: 25px;
+  
+}
+
+.new-plate-form input{
+  height: 1.2em;
+  margin-bottom: 1.2em;
+  margin-top: 0.2em;
+}
+
+.new-plate-form input.extras{
+  height: 3em;
+  text-align: start;
+}
+
+.btn{
+  margin-top:5px;
+  margin-bottom: 5px;
+  color:white;
+  border:none;
+}
+
+.add-btn{
+  background-color: rgb(16, 37, 107);
+}
+
+.add-btn:hover{
+  
+  background-color: rgb(92, 104, 241);
+}
+
+.cancel-btn{
+  background-color: rgb(157, 21, 21);
+}
+
+.cancel-btn:hover{
+  
+  background-color: rgb(230, 16, 16);
+}
+
+.plate{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1em;
+  width:70%;
+}
+
+.title-and-extras{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.price a{
+  text-decoration: none;
+  color: red;
+  
+}
+
+.price a:nth-of-type(2){
+
+  color: rgb(26, 144, 99);
+  
+}
+
+.edit-plate-form{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  border:1px solid black;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 30px;
+  margin-top: 5px;
+  background-color: rgb(221, 220, 170);
+  
+}
+
+.plate.plate-form{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+.edit-plate-form input{
+  border:none;
+  border-radius: 31px;
+  text-align: center;
+}
+
+.edit-plate-form button{
+      background-color: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 0; /* Remove padding if not needed */
+      font: inherit; /* Use the same font as the parent */
+      outline: none; /* Remove outline on focus */
+}
+
+.edit-plate-form label{
+  color: white;
+  margin-top:15px;
+  margin-bottom:5px;
+  
+}
+
+.edit-plate-form button:hover{
+  
+  color:whitesmoke;
+  
+}
+
+.plate-form{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.price a{
+  margin-left: 5px;
+}
+
+.fas.fa-save{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.imageContainer{
+  position: absolute; /* Position absolutely within the container */
+  top: 200px; /* Adjust this value to set the top position */
+  right: 100px; /* Adjust this value to set the left position */
+}
+
+.image {
+  width:500px;
+  height: auto;
+}
+
+.Wine-image{
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  
+
+}
+
+@media (max-width: 1135px) {
+
+  .imageContainer{
+      display:none;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .Food-menuxx{
+      
+      margin: auto;
+  } 
+  .plate .price{
+      margin-left: 15%;
+  }
+
+  .Wine-image{
+      display: block;
+    }
+
+  .imageContainer{
+      display:none;
+  }
+}

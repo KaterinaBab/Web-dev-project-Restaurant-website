@@ -1,0 +1,15 @@
+<div class="signin-form-box" id="sign-inn">
+    <form action="/sign_in" method="post" class = "signin-form-content">
+        <h2 style="font-family: 'gyptfcerom_1';" class = "signin-form-item">Σύνδεση</h2>
+        <input type="text" name="username" id="username-signin" placeholder="username" required
+            autocomplete="username" class = "signin-form-item">
+        <input type="password" name="password" id="pwd" placeholder="password" required
+            autocomplete="current-password" class = "signin-form-item">
+        <button type="submit" class = 'SubmitButton signin-form-item'>Sign in</button>
+        <h6 style="font-family: 'gyptfcerom_1'; color:red; margin-top: 0px;" class = "signin-form-item">{{failedAuth}}</h6>
+        <h5 style="font-family: 'gyptfcerom_1';" class = "signin-form-item">Don't have an account?</h5>
+        <!--<button type="button" class = "signin-form-item SubmitButton">Εγγραφή</button>-->
+        <a style="font-family: 'gyptfcerom_1';"  href="/log_in_form" class=" signin-form-item  sign-in-button">Sign up</a>
+
+    </form>
+</div>

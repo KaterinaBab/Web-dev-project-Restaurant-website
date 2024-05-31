@@ -1,0 +1,259 @@
+.navbar-container{
+  display: flex;
+  height:auto;
+  background-color: #dacbcb;
+  color:rgb(59, 45, 45);
+  padding: 0 0;
+  /* position: fixed; */
+  flex-direction: column;
+  /*'
+  
+top: 0;
+left: 0;
+z-index: 5;
+width: 100%;
+transition: top 0.5s ease-in-out; *//* Smooth transition */
+}
+
+/* Make the navbar hidden when scrolling down */
+/*
+#MyfNavbar.hidden {
+top: -100px;
+} */
+
+.navbar-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /*margin:auto;*/
+}
+.navbar-list{
+  list-style-type: none;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/*.navbar-list .logoDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}*/
+.navbar-list li a{
+  font-family: "egyptfcerom_1";
+  text-decoration: none;
+  color: white;
+}
+.navbar-list .logo-text {
+  font-family: "Impact", "Arial Black", sans-serif;
+  font-size: 1.9rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.logo-text .dots {
+  font-size: 5rem;
+  color: #333;
+  margin-left: 5px;
+}
+
+.dot-red {
+  color: #8A1F27;
+}
+
+.dot-green {
+  color: #A3A644;
+}
+
+.subtext {
+  font-family: "Impact", "Arial Black", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  display: block;
+  text-align: center;
+}
+
+
+.navbar-list li::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0%;
+  width: 0px; /* Start with zero width */
+  height: 2px; /* Height of the horizontal line */
+  background-color: white; /* Color of the horizontal line */
+  transition: width 0.4s ease; /* Smooth transition */
+  z-index: 1; /* Ensure line stays behind text */
+}
+
+.navbar-list li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px; /* Start with zero width */
+  height: 0px; /* Height of the horizontal line */
+  background-color: white; /* Color of the horizontal line */
+  transition: height 0.4s ease; /* Smooth transition */
+  z-index: -1; /* Ensure line stays behind text */
+}
+
+
+ul.navbar-list li.active::after{
+  width: 100%; /* Increase width to 100% for active items */
+}
+
+.navbar-list li:hover::after{
+  width: 100%; /* Decrease line width on hover */
+}
+
+.navbar-list li hr{
+  height:5px;
+  color: rgb(0, 0, 0);
+  display: block;
+}
+
+.navbar-list li {
+  position: relative;
+  text-align: center;
+  width:auto;
+  padding:1% 0; /* Adjust padding as needed */
+  font-family: "egyptfcerom_1";
+  text-decoration: none;
+  color: white;
+  font-size:x-large;
+}
+
+.navbar-item{
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-toggler {
+display: none;
+font-size: 30px;
+cursor: pointer;
+color: rgb(238, 240, 245);
+position: absolute;
+top: 10px;
+right: 20px;
+z-index: 1;
+}
+
+.manage-acc-navbar li{
+display:none;
+}
+
+
+.manage-acc-navbar:hover li{
+display:block;
+}
+
+.manage-acc-navbar{
+display:flex;
+flex-direction: column;
+justify-content: space-around;
+position: absolute;
+}
+
+.profile-nav{
+display:flex;
+flex-direction: column;
+justify-content: space-around;
+position: absolute;
+}
+
+.dropdown-content{
+display: none;
+}
+
+.user-dropdown:hover .dropdown-content{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+position:absolute;
+margin-top: 4%;
+}
+
+.user-dropdown:hover .dropdown-content a{
+margin-top: 5px;
+margin-bottom: 5px;
+}
+
+.dropdown-content a:hover {
+color: rgb(47, 163, 66);
+}
+
+
+.dropdown-content a{
+font-family: "egyptfcerom_1";
+text-decoration: none;
+color: black;
+}
+
+.user-dropdown{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+
+.dropbtn-user{
+position: absolute;
+background-color: transparent;
+border: none;
+font-family: "egyptfcerom_1";
+text-decoration: none;
+color: white;
+font-size: 1em;
+display: flex;
+justify-content:space-evenly;
+align-items: center;
+}
+
+.dropbtn-user img{
+display: block;
+}
+
+
+@media (max-width: 768px) {
+.navbar-content {
+    flex-direction: column;
+}
+
+.logoDiv {
+  display: none;
+}
+
+.navbar-list {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+}
+
+.navbar-list li {
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px;
+}
+
+.navbar-toggler {
+    display: block;
+}
+
+}
+
+/* Add this for toggling navbar visibility */
+.navbar-list.show {
+display: flex;
+}
+

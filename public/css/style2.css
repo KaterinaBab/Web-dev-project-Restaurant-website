@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: none;
+    width: 70%;
+    height: 1px;
+    background-color: black;
+    margin-bottom: 20px;
+    margin-right: 25%;
+}
+
+/* Home bar */
+.Homebar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transform: scale(1);
+    transition: height 0s, transform 1s;
+}
+
+.Homebar.zoomed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    transform: scale(0.7);
+    border: 1px solid black;
+    opacity: 0.7;
+}
+
+.Homebar ul {
+    list-style: none;
+    background: #fff;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.Homebar li {
+    display: inline-block;
+}
+
+.Homebar a {
+    font-family: "egyptfcerom_1";
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    width: 150px;
+    padding: 0px 40px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Homebar .Logo {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.Homebar .Logo img {
+    padding-top: 1px;
+    width: 170px;
+    height: 60px;
+}
+
+.Homebar .Menu:hover,
+.Homebar .Res:hover {
+    color: #666;
+}
+
+/* Menu page */
+.header {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.header-ml {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.eng {
+    font-weight: normal;
+}
+
+.ingred {
+    font-size: 0.9rem;
+    width: 40%;
+    margin-bottom: 5px;
+}
+
+.Container1, .Container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.Food-menu {
+    margin-left: 8%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.Wine-menu {
+    margin-left: 8%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+.Food-menu ul, .Wine-menu ul {
+    list-style: none;
+    font-size: 1.1rem;
+    padding: 0%;
+    margin: 0%;
+}
+
+.Food-menu li, .Wine-menu li {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.3rem;
+}
+
+.sub-option {
+    justify-content: space-between;
+}
+
+.l, .r {
+    width: 27%;
+    box-sizing: border-box;
+}
+
+
+
+.Food-menu img, .Wine-menu img {
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+.Food-image, .Wine-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.Food-image img, .Wine-image img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.TheMenu {
+    margin-top:5%;
+}
+
+
+.signin-form{
+    
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signin-form-content { 
+    
+    display: flex;
+    flex-direction: column;
+  }
+
+.signin-form .signin-form-content input{
+    border-radius: 10px;
+    height: 30px;
+    text-align: center;
+
+}
+
+.signin-form .signin-form-content input{
+    font-family: "gyptfcerom_1";
+    text-decoration: dotted;
+
+}
+
